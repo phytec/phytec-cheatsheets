@@ -1,0 +1,41 @@
+name: Deploy Cheat Sheet PDFs
+# This GitHub action will build our cheat sheet PDF files
+# and publishe them as a Pre-Release on the GitHub Release page
+
+# Run the action only when the cheat sheets are changed
+# and a pullrequst on master was merged
+on:
+  pull_request_target:
+    types:
+      - closed
+    branches:
+      - 'master'
+    paths:
+      - 'source/cheatsheet*.rst'
+
+jobs:
+  Deploy_cheat_sheets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v2
+      - name: Setup Python
+        uses: actions/setup-python@v2
+      - name: Upgrade pip
+        run: |
+          python3 -m pip install --upgrade pip
+      - name: Install dependencies
+        run: |
+          python3 -m pip install -r ./requirements.txt
+      - name: Run PDF Build
+        run: |
+          make pdf
+      # Deploy PDFs as pre-Release on GitHub Relese Page
+      - uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Cheat sheet draft build"
+          files: |
+            build/*.pdf
