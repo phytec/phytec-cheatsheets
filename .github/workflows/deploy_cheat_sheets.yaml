@@ -9,7 +9,7 @@ on:
     types:
       - closed
     branches:
-      - 'master'
+      - 'main'
     paths:
       - 'source/cheatsheet*.rst'
 

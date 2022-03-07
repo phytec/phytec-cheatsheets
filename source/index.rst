@@ -1,7 +1,7 @@
 Welcome to phytec-cheatsheets!
 ==============================
 This documentation contains a collection of various cheat sheets 
-for new and advandes users of Phytec SOMs and SBCs. 
+for new and advanced users of PHYTEC SOMs and SBCs. 
 
 .. toctree::
    :maxdepth: 2

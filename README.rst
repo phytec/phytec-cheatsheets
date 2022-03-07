@@ -11,7 +11,7 @@ You can find the latest PDF Builds of the cheat sheets on our
 `GitHub Releases page`_. Please note that the releases which are marked 
 with the "Pre-Release"-Tag are still under development and can contain 
 mistakes or typos. If you note anything, feel free to `open a issue`_ or
-:ref:`Start coding<contribute to this repository>`.
+`start coding`_.
 
 .. _GitHub Releases page: https://github.com/phytec/phytec-cheatsheets/releases
 .. _open a issue: https://github.com/phytec/phytec-cheatsheets/issues
@@ -50,9 +50,10 @@ Discussion and Submitting patches
 - This framework should be a platform for discussion and continuous
   improvement.
 - You can push a branch and open a pull-request for a change.
-- Add a signed-off-by to your commits. Use ``git commit -s ...`` when commiting
+- Add a signed-off-by to your commits. Use ``git commit -s ...`` when committing
   changes.
 
+.. _start coding:
 Start coding
 ------------
 
@@ -72,7 +73,7 @@ Start coding
 Build the Documentation
 #######################
 
-Build the separate cheatsheets:
+Build the separate cheat sheets:
 
 .. code-block:: text
    make pdf
@@ -93,7 +94,7 @@ Build the documentation and generate html format.
 
    make html
 
-- On Ubuntu 20.04 you might need to expand the PATH in the enviroment::
+- On Ubuntu 20.04 you might need to expand the PATH in the environment::
 
         PATH=$PATH:~/.local/bin
 
