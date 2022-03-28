@@ -13,3 +13,4 @@ storage/
 _build
 .venv
 tags
+.vscode
