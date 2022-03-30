@@ -73,20 +73,11 @@ Start coding
 Build the Documentation
 #######################
 
-Build the separate cheat sheets:
+Build the cheat sheets as PDF-files:
 
 .. code-block:: text
+
    make pdf
-
-Build the whole documentation and generate a single PDF document.
-
-.. code-block:: text
-
-   make pdf_full
-
-- On Ubuntu 20.04 you need to install some latex packages, e.g.::
-
-        apt install texlive texlive-latex-extra latexmk
 
 Build the documentation and generate html format.
 

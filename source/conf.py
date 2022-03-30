@@ -23,15 +23,14 @@ author = 'Phytec i.MX8-Team'
 
 # The full version, including alpha/beta/rc tags
 release = '0.1'
-
+version = '0.1'
 
 # -- General configuration ---------------------------------------------------
 
 # Add any Sphinx extension module names here, as strings. They can be
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
-#  extensions = [
-#  ]
+extensions = ['sphinx.ext.autodoc','rst2pdf.pdfbuilder']
 
 # Add any paths that contain templates here, relative to this directory.
 #  templates_path = ['_templates']
@@ -56,7 +55,11 @@ html_theme = 'sphinx_rtd_theme'
 
 
 # -- Options for PDF output -------------------------------------------------
-latex_elements = {
-    'fontpkg': '\\usepackage{lmodern}'
-}
+pdf_documents = [
+    ('index', u'cheatsheets_full', u'PHYTEC Cheatsheets', u'Phytec i.MX8 Team', {}),
+    ('cheatsheet_linux', u'cheatsheet_linux', u'PHYTEC Cheatsheet Linux', u'Phytec i.MX8 Team', {}),
+    ('cheatsheet_uboot', u'cheatsheet_uboot', u'PHYTEC Cheatsheet Uboot', u'Phytec i.MX8 Team', {}),
+    ('cheatsheet_yocto', u'cheatsheet_yocto', u'PHYTEC Cheatsheet Yocto', u'Phytec i.MX8 Team', {})]
 
+pdf_toc_depth = 2
+pdf_blank_first_page = False

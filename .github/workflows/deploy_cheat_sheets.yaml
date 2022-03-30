@@ -11,7 +11,7 @@ on:
     branches:
       - 'main'
     paths:
-      - 'source/cheatsheet*.rst'
+      - 'source/**/*.rst'
 
 jobs:
   Deploy_cheat_sheets:
