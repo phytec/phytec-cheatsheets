@@ -10,11 +10,3 @@ for new and advanced users of PHYTEC SOMs and SBCs.
    cheatsheet_linux
    cheatsheet_uboot
    cheatsheet_yocto
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
